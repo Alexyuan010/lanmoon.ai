@@ -1,10 +1,318 @@
 <!DOCTYPE html>
-<!-- truncated for brevity in code, but in actual code you'd paste the entire HTML content from the textdoc -->
-<html>
+<html lang="en" class="h-full scroll-smooth">
 <head>
-<title>LANMOON.ai — Enterprise NFT Identity for Digital Avatars</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LANMOON.ai — Enterprise NFT Identity for Digital Avatars</title>
+  <meta name="description" content="LANMOON transforms corporate headshots into blockchain-secured, AI-generated, brand-consistent digital assets—co-owned by companies and talent. Privacy-first. Web3-ready." />
+  <meta property="og:title" content="LANMOON.ai — Enterprise NFT Identity for Digital Avatars" />
+  <meta property="og:description" content="AI headshots as privacy-protected NFTs. Co-ownership for companies and talent. Future-ready identity that strengthens alumni ties and brand trust." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lanmoon.ai" />
+  <meta name="theme-color" content="#12131a" />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Tailwind via CDN for quick static deploy. If you prefer no CDN, replace with compiled CSS. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:'#eef2ff', 100:'#e0e7ff', 200:'#c7d2fe', 300:'#a5b4fc', 400:'#818cf8', 500:'#6366f1', 600:'#4f46e5', 700:'#4338ca', 800:'#3730a3', 900:'#312e81'
+            },
+            accent: {
+              50:'#ecfeff', 100:'#cffafe', 200:'#a5f3fc', 300:'#67e8f9', 400:'#22d3ee', 500:'#06b6d4', 600:'#0891b2', 700:'#0e7490', 800:'#155e75', 900:'#164e63'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root{--radius:16px}
+    .glass{backdrop-filter:saturate(140%) blur(10px); background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04)); border:1px solid rgba(255,255,255,.12)}
+    .card{border-radius: var(--radius)}
+    .shadow-soft{box-shadow: 0 10px 30px rgba(2,6,23,.25)}
+  </style>
 </head>
-<body>
-<p>Sample placeholder - replace with full HTML from the textdoc.</p>
+<body class="h-full text-slate-200 bg-slate-950 bg-[radial-gradient(90rem_60rem_at_80%_-10%,rgba(79,70,229,.25),transparent),radial-gradient(60rem_40rem_at_-10%_10%,rgba(6,182,212,.2),transparent)]">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-950/70">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-2xl bg-gradient-to-br from-brand-500 to-accent-500 grid place-items-center font-extrabold">L</div>
+          <span class="text-lg sm:text-xl font-semibold tracking-tight">LANMOON<span class="text-accent-400">.ai</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+          <a href="#features" class="hover:text-white">Features</a>
+          <a href="#how" class="hover:text-white">How it Works</a>
+          <a href="#privacy" class="hover:text-white">Privacy & Compliance</a>
+          <a href="#contact" class="hover:text-white">Contact</a>
+          <a href="#cta" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 px-4 py-2 text-sm font-medium text-white shadow-soft">Request Demo</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg:white/5" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-4 py-4 flex flex-col gap-3 text-sm">
+        <a href="#features" class="hover:text-white">Features</a>
+        <a href="#how" class="hover:text-white">How it Works</a>
+        <a href="#privacy" class="hover:text-white">Privacy & Compliance</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+        <a href="#cta" class="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 px-4 py-2 text-sm font-medium text-white">Request Demo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-20 sm:pt-24 sm:pb-28">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300">
+            <span class="h-1.5 w-1.5 rounded-full bg-accent-400"></span> New strategy: NFT identity for the future of work
+          </div>
+          <h1 class="mt-4 text-3xl sm:text-5xl font-extrabold leading-tight tracking-tight text-white">
+            Enterprise NFT Identity for <span class="bg-gradient-to-r from-brand-400 to-accent-400 bg-clip-text text-transparent">AI Digital Avatars</span>
+          </h1>
+          <p class="mt-5 text-base sm:text-lg text-slate-300 max-w-xl">
+            LANMOON transforms every employee’s headshot into a blockchain-secured, AI-generated, brand-consistent asset—co-owned by companies and talent. Privacy-first, Web3-ready, and built for a world where both sides are capital owners.
+          </p>
+          <div id="cta" class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 px-6 py-3 font-medium shadow-soft">Request a Demo</a>
+            <a href="#how" class="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 font-medium hover:bg-white/5">See How It Works</a>
+          </div>
+          <div class="mt-6 text-xs text-slate-400">SOC-ready architecture • GDPR / PDPA / PIPL conscious • Chain-off image storage</div>
+        </div>
+        <div class="relative">
+          <div class="glass card p-6 sm:p-8">
+            <div class="grid gap-4">
+              <div class="rounded-xl border border-white/10 p-4">
+                <h3 class="text-sm font-semibold text:white">Co-Owned Identity NFT</h3>
+                <p class="mt-1 text-sm text-slate-300">Programmable rights for use during employment and alumni phases—retain, license, or transfer upon exit.</p>
+              </div>
+              <div class="rounded-xl border border-white/10 p-4">
+                <h3 class="text-sm font-semibold text:white">Privacy-Protected</h3>
+                <p class="mt-1 text-sm text-slate-300">Chain stores only the hash & metadata; encrypted images live off-chain with strict access controls.</p>
+              </div>
+              <div class="rounded-xl border border:white/10 p-4">
+                <h3 class="text-sm font-semibold text:white">Brand-Consistent AI</h3>
+                <p class="mt-1 text-sm text-slate-300">Automated, uniform headshots across HRIS, ID cards, comms, and e-commerce touchpoints.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos / Social proof (optional, simple placeholders) -->
+  <section class="py-10 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-xs uppercase tracking-wider text-slate-400">Works with your stack</p>
+      <div class="mt-4 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 opacity-70">
+        <div class="rounded-lg border border-white/10 py-3 text-center text-xs">Workday</div>
+        <div class="rounded-lg border border-white/10 py-3 text-center text-xs">SAP SuccessFactors</div>
+        <div class="rounded-lg border border-white/10 py-3 text-center text-xs">Oracle HCM</div>
+        <div class="rounded-lg border border-white/10 py-3 text-center text-xs">Slack / Teams</div>
+        <div class="rounded-lg border border-white/10 py-3 text-center text-xs">Okta / Azure AD</div>
+        <div class="rounded-lg border border-white/10 py-3 text-center text-xs">Salesforce</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Why LANMOON</h2>
+        <p class="mt-2 text-slate-300">Unify corporate identity, protect employee privacy, and build long-term alumni value—without changing how your teams work.</p>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="card border border-white/10 p-6">
+          <h3 class="font-semibold text-white">AI-Generated Consistency</h3>
+          <p class="mt-2 text-sm text-slate-300">On-brand portraits for every employee across regions—no studio bookings or retouch queues.</p>
+        </div>
+        <div class="card border border-white/10 p-6">
+          <h3 class="font-semibold text-white">Web3 Co-Ownership</h3>
+          <p class="mt-2 text-sm text-slate-300">Align incentives in a world where both sides are capital owners. Shared governance via smart contracts.</p>
+        </div>
+        <div class="card border border-white/10 p-6">
+          <h3 class="font-semibold text-white">Alumni Links, Not Dead Ends</h3>
+          <p class="mt-2 text-sm text-slate-300">Retain, license, or transfer assets upon exit—keep trust and brand continuity beyond employment.</p>
+        </div>
+        <div class="card border border-white/10 p-6">
+          <h3 class="font-semibold text-white">Compliance-Conscious</h3>
+          <p class="mt-2 text-sm text-slate-300">GDPR/PDPA/PIPL aware design. Consent flows, audit trails, and revocation paths built-in.</p>
+        </div>
+        <div class="card border border-white/10 p-6">
+          <h3 class="font-semibold text-white">Secure by Design</h3>
+          <p class="mt-2 text-sm text-slate-300">Off-chain encrypted storage; on-chain proof. Role-based access, SSO, and key escrow options.</p>
+        </div>
+        <div class="card border border-white/10 p-6">
+          <h3 class="font-semibold text-white">Plug-in Integrations</h3>
+          <p class="mt-2 text-sm text-slate-300">APIs & connectors for HRIS, IAM, and collaboration tools. Roll out in weeks, not months.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="py-20 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">How It Works</h2>
+        <p class="mt-2 text-slate-300">A simple, secure flow from capture to co-ownership.</p>
+      </div>
+      <ol class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <li class="card border border-white/10 p-6">
+          <span class="text-xs text-slate-400">Step 1</span>
+          <h3 class="mt-1 font-semibold text-white">Capture / Generate</h3>
+          <p class="mt-1 text-sm text-slate-300">Upload or AI-generate on-brand portraits from approved templates and styles.</p>
+        </li>
+        <li class="card border border-white/10 p-6">
+          <span class="text-xs text-slate-400">Step 2</span>
+          <h3 class="mt-1 font-semibold text-white">Encrypt & Store Off-Chain</h3>
+          <p class="mt-1 text-sm text-slate-300">Images stored encrypted; only hashed proofs and metadata go on-chain.</p>
+        </li>
+        <li class="card border border-white/10 p-6">
+          <span class="text-xs text-slate-400">Step 3</span>
+          <h3 class="mt-1 font-semibold text-white">Mint NFT & Set Rights</h3>
+          <p class="mt-1 text-sm text-slate-300">Smart contracts define usage during employment and alumni phases.</p>
+        </li>
+        <li class="card border border-white/10 p-6">
+          <span class="text-xs text-slate-400">Step 4</span>
+          <h3 class="mt-1 font-semibold text-white">Integrate & Govern</h3>
+          <p class="mt-1 text-sm text-slate-300">Sync to HRIS/ID/IAM. Consent, audit trails, and revocation handled from a single admin panel.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Privacy & Compliance -->
+  <section id="privacy" class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Privacy & Compliance</h2>
+        <p class="mt-2 text-slate-300">Designed for global standards and evolving workforce models.</p>
+      </div>
+      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+        <div class="card border border-white/10 p-6">
+          <h3 class="font-semibold text-white">Consent-Driven</h3>
+          <p class="mt-2 text-sm text-slate-300">Granular consent flows, purpose limitation, and employee self-service portals.</p>
+        </div>
+        <div class="card border border-white/10 p-6">
+          <h3 class="font-semibold text-white">Data Minimization</h3>
+          <p class="mt-2 text-sm text-slate-300">No raw data on public chains; proofs only. Revocation paths and data retention policies supported.</p>
+        </div>
+        <div class="card border border-white/10 p-6">
+          <h3 class="font-semibold text-white">Audit & Export</h3>
+          <p class="mt-2 text-sm text-slate-300">Comprehensive logs for DPIA/SOC reviews and regulator requests.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="card glass p-8 lg:p-12 text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Ready to pilot LANMOON in your organization?</h2>
+        <p class="mt-2 text-slate-300">Deploy in weeks. Prove value with a 100–500 employee cohort, then scale globally.</p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 px-6 py-3 font-medium shadow-soft">Request a Demo</a>
+          <a href="#faq" class="inline-flex items-center justify-center rounded-xl border border-white/15 px-6 py-3 font-medium hover:bg-white/5">See FAQs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">FAQs</h2>
+      </div>
+      <div class="mt-10 grid gap-6">
+        <div class="card border border-white/10 p-6">
+          <h3 class="font-semibold text-white">Do you store faces on-chain?</h3>
+          <p class="mt-2 text-sm text-slate-300">No. Images are encrypted off-chain; only hashes/metadata are on-chain for integrity and provenance.</p>
+        </div>
+        <div class="card border border-white/10 p-6">
+          <h3 class="font-semibold text-white">Which blockchains are supported?</h3>
+          <p class="mt-2 text-sm text-slate-300">Configurable: enterprise EVM chains (Polygon, Base, private EVM), Flow, or permissioned ledgers per your compliance needs.</p>
+        </div>
+        <div class="card border border-white/10 p-6">
+          <h3 class="font-semibold text-white">How do alumni rights work?</h3>
+          <p class="mt-2 text-sm text-slate-300">Smart contracts define post-employment rights, including retention, licensing back to the company, or transfer to the individual.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white">Contact Us</h2>
+          <p class="mt-2 text-slate-300">Want a live demo or security briefing? Reach out and we’ll set up a session for your team.</p>
+          <ul class="mt-6 space-y-2 text-sm text-slate-300">
+            <li><strong>Email:</strong> alex.yuan@lanmoontech.com</li>
+            <li><strong>Sales:</strong> zhao@lanmoontech.com</li>
+            <li><strong>HQ:</strong> Singapore • Global delivery</li>
+          </ul>
+        </div>
+        <form class="card border border-white/10 p-6 grid gap-4" onsubmit="event.preventDefault(); alert('Thanks! We\\'ll get back to you shortly.');">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm text-slate-300">First name</label>
+              <input class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-500" required />
+            </div>
+            <div>
+              <label class="block text-sm text-slate-300">Last name</label>
+              <input class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-500" required />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm text-slate-300">Work email</label>
+            <input type="email" class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2 focus:outline:none focus:ring-2 focus:ring-accent-500" required />
+          </div>
+          <div>
+            <label class="block text-sm text-slate-300">Company</label>
+            <input class="mt-1 w-full rounded-lg bg-white/5 border border-white/10 px-3 py-2 focus:outline:none focus:ring-2 focus:ring-accent-500" />
+          </div>
+          <div>
+            <label class="block text-sm text-slate-300">Message</label>
+            <textarea rows="4" class="mt-1 w-full rounded-lg bg:white/5 border border-white/10 px-3 py-2 focus:outline:none focus:ring-2 focus:ring-accent-500" placeholder="Tell us about your use case"></textarea>
+          </div>
+          <button class="mt-2 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 px-6 py-3 font-medium shadow-soft" type="submit">Request Demo</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400">
+      <p>© <span id="y"></span> LANMOON.ai. All rights reserved.</p>
+      <nav class="flex gap-6">
+        <a href="#privacy" class="hover:text-white">Privacy</a>
+        <a href="#" class="hover:text-white">Security</a>
+        <a href="#" class="hover:text-white">Status</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
